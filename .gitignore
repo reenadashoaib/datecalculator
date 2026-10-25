@@ -1,0 +1,3 @@
+# API keys read by the design skill's image-generation scripts
+.claude/skills/.env
+.env
