@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Day of the Week Is a Date? | Dayspan</title>
+<meta name="description" content="Find the day of the week for any date, along with its ISO week number, day of the year and days left in the year.">
+<link rel="canonical" href="https://dayspan.example/day-of-week">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dayspan">
+<meta property="og:title" content="What Day of the Week Is a Date? | Dayspan">
+<meta property="og:description" content="Find the day of the week for any date, along with its ISO week number, day of the year and days left in the year.">
+<meta property="og:url" content="https://dayspan.example/day-of-week">
+<meta name="theme-color" content="#c41e3a">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/ads-config.js"></script>
+<script src="/assets/js/ads.js" defer></script>
+<script type="module" src="/assets/js/app.js"></script>
+</head>
+<body data-tool="weekday">
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="masthead__inner">
+<a class="brand" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="24" rx="4" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/><path d="M3 9a4 4 0 0 1 4-4h18a4 4 0 0 1 4 4v3H3z" fill="var(--red-bar)"/><rect x="9" y="2" width="3" height="7" rx="1.5" fill="var(--ink)"/><rect x="20" y="2" width="3" height="7" rx="1.5" fill="var(--ink)"/><path d="M11 17h10M11 22h6" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/></svg>Dayspan</a>
+<nav class="tools" aria-label="Calculators">
+<a href="/">Days between dates</a>
+<a href="/add-subtract">Add or subtract</a>
+<a href="/age">Age</a>
+<a href="/workdays">Workdays</a>
+<a href="/day-of-week" aria-current="page">Day of the week</a>
+</nav>
+</div>
+</header>
+
+<div class="band"><div class="ad ad--top" data-ad="top-banner"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div>
+
+<div class="frame">
+<aside class="rail rail--left" aria-label="Advertisement"><div class="rail__sticky"><div class="ad ad--left" data-ad="left-skyscraper"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div></aside>
+<main id="main">
+<div class="tool-head"><h1>Day of the week for any date</h1><p>Pick a date to see which weekday it falls on, its week number and how far into the year it is.</p></div><form class="calc" id="calc" novalidate>
+<div class="fields">
+<div class="field"><label for="date">Date</label><div class="field-row"><input type="date" id="date" name="date" min="0001-01-01" max="9999-12-31" required><button type="button" class="btn" data-today="date">Today</button></div></div>
+</div>
+
+<noscript><p class="empty">This calculator needs JavaScript. Turn it on in your browser to see results.</p></noscript>
+<section class="result" aria-labelledby="result-h">
+<h2 id="result-h" class="visually-hidden">Result</h2>
+<p id="result-empty" class="empty" hidden></p>
+<div id="result-body">
+<div class="spread spread--single"><figure class="leaf" id="leaf-a"><figcaption class="visually-hidden">Date</figcaption><span class="leaf__month"></span><span class="leaf__day"></span><span class="leaf__weekday"></span></figure><div class="span-line" aria-hidden="true"><div class="span-line__rule visually-hidden"></div><span class="span-line__value" id="span-value"></span><span class="span-line__unit" id="span-unit"></span></div></div>
+<p id="summary" class="summary" aria-live="polite"></p>
+<dl id="facts" class="facts"></dl>
+<div class="share"><button class="btn" id="copy-link" type="button">Copy link to this result</button><span id="copy-status" role="status"></span></div>
+</div>
+</section>
+</form><section class="ad-tiles" aria-label="Advertisements"><div class="ad ad--tile" data-ad="tile-1"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div><div class="ad ad--tile" data-ad="tile-2"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div><div class="ad ad--tile" data-ad="tile-3"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div><div class="ad ad--tile" data-ad="tile-4"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></section><article class="prose">
+<h2>Week numbers and day of the year</h2>
+<p>Week numbers follow the ISO 8601 standard used across Europe and in most business software: weeks start on Monday, and week 1 is the week that contains the year&rsquo;s first Thursday. That means the first days of January can belong to the last week of the previous year, and the last days of December can belong to week 1 of the next.</p>
+<p>The day of the year counts January 1 as day 1. A leap year, such as 2024 or 2028, has 366 days because it includes February 29. A year is a leap year when it divides by 4, except for century years, which must divide by 400. So 2000 was a leap year and 2100 won&rsquo;t be.</p>
+<h2>Questions</h2>
+<div class="faq"><details><summary>What day of the week was I born on?</summary><p>Enter your date of birth. The calendar leaf and the summary show the weekday.</p></details><details><summary>Why is my week number different from my calendar?</summary><p>Some calendars, mostly in the US, start weeks on Sunday and count the week of January 1 as week 1. This calculator uses the ISO standard.</p></details><details><summary>How far back does it work?</summary><p>Any date from year 1 to year 9999, using the modern (Gregorian) calendar throughout.</p></details></div><h2>More date calculators</h2><ul class="other-tools"><li><a href="/"><strong>Days between dates</strong><span>Count the days, weeks and months from one date to another.</span></a></li><li><a href="/add-subtract"><strong>Add or subtract</strong><span>Find the date a number of days, weeks, months or years away.</span></a></li><li><a href="/age"><strong>Age</strong><span>Work out an exact age in years, months and days.</span></a></li><li><a href="/workdays"><strong>Workdays</strong><span>Count Monday-to-Friday days between two dates.</span></a></li></ul></article>
+</main>
+<aside class="rail rail--right" aria-label="Advertisement"><div class="rail__sticky"><div class="ad ad--right" data-ad="right-vertical"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div></aside>
+</div>
+
+<div class="band"><div class="ad ad--bottom" data-ad="bottom-banner"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div>
+
+<footer class="footer">
+<div class="footer__inner">
+<p>&copy; 2026 Dayspan. Free date calculators.</p>
+<nav aria-label="Site">
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+<a href="/privacy">Privacy policy</a>
+<a href="/terms">Terms of use</a>
+</nav>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Age Calculator: Exact Age in Years, Months and Days | Dayspan</title>
+<meta name="description" content="Calculate an exact age from a date of birth in years, months, weeks and days, plus the date of the next birthday.">
+<link rel="canonical" href="https://dayspan.example/age">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dayspan">
+<meta property="og:title" content="Age Calculator: Exact Age in Years, Months and Days | Dayspan">
+<meta property="og:description" content="Calculate an exact age from a date of birth in years, months, weeks and days, plus the date of the next birthday.">
+<meta property="og:url" content="https://dayspan.example/age">
+<meta name="theme-color" content="#c41e3a">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/ads-config.js"></script>
+<script src="/assets/js/ads.js" defer></script>
+<script type="module" src="/assets/js/app.js"></script>
+</head>
+<body data-tool="age">
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="masthead__inner">
+<a class="brand" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="24" rx="4" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/><path d="M3 9a4 4 0 0 1 4-4h18a4 4 0 0 1 4 4v3H3z" fill="var(--red-bar)"/><rect x="9" y="2" width="3" height="7" rx="1.5" fill="var(--ink)"/><rect x="20" y="2" width="3" height="7" rx="1.5" fill="var(--ink)"/><path d="M11 17h10M11 22h6" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/></svg>Dayspan</a>
+<nav class="tools" aria-label="Calculators">
+<a href="/">Days between dates</a>
+<a href="/add-subtract">Add or subtract</a>
+<a href="/age" aria-current="page">Age</a>
+<a href="/workdays">Workdays</a>
+<a href="/day-of-week">Day of the week</a>
+</nav>
+</div>
+</header>
+
+<div class="band"><div class="ad ad--top" data-ad="top-banner"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div>
+
+<div class="frame">
+<aside class="rail rail--left" aria-label="Advertisement"><div class="rail__sticky"><div class="ad ad--left" data-ad="left-skyscraper"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div></aside>
+<main id="main">
+<div class="tool-head"><h1>Age calculator</h1><p>Enter a date of birth to see the exact age today, or on any other date.</p></div><form class="calc" id="calc" novalidate>
+<div class="fields">
+<div class="field"><label for="birth">Date of birth</label><div class="field-row"><input type="date" id="birth" name="birth" min="0001-01-01" max="9999-12-31" required></div></div><div class="field"><label for="on">Age on</label><div class="field-row"><input type="date" id="on" name="on" min="0001-01-01" max="9999-12-31" required><button type="button" class="btn" data-today="on">Today</button></div></div>
+</div>
+
+<noscript><p class="empty">This calculator needs JavaScript. Turn it on in your browser to see results.</p></noscript>
+<section class="result" aria-labelledby="result-h">
+<h2 id="result-h" class="visually-hidden">Result</h2>
+<p id="result-empty" class="empty" hidden></p>
+<div id="result-body">
+<div class="spread"><figure class="leaf" id="leaf-a"><figcaption class="visually-hidden">Date of birth</figcaption><span class="leaf__month"></span><span class="leaf__day"></span><span class="leaf__weekday"></span></figure><div class="span-line" aria-hidden="true"><div class="span-line__rule"></div><span class="span-line__value" id="span-value"></span><span class="span-line__unit" id="span-unit"></span></div><figure class="leaf" id="leaf-b"><figcaption class="visually-hidden">Age on</figcaption><span class="leaf__month"></span><span class="leaf__day"></span><span class="leaf__weekday"></span></figure></div>
+<p id="summary" class="summary" aria-live="polite"></p>
+<dl id="facts" class="facts"></dl>
+<div class="share"><button class="btn" id="copy-link" type="button">Copy link to this result</button><span id="copy-status" role="status"></span></div>
+</div>
+</section>
+</form><section class="ad-tiles" aria-label="Advertisements"><div class="ad ad--tile" data-ad="tile-1"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div><div class="ad ad--tile" data-ad="tile-2"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div><div class="ad ad--tile" data-ad="tile-3"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div><div class="ad ad--tile" data-ad="tile-4"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></section><article class="prose">
+<h2>How age is calculated</h2>
+<p>Age is counted in whole calendar years and months from the date of birth, then the remaining days. Someone born on May 20 turns a year older on each May 20, and is &ldquo;1 month older&rdquo; on the 20th of each month.</p>
+<p>People born on February 29 have a birthday on February 28 in years that aren&rsquo;t leap years. Change <strong>Age on</strong> to see someone&rsquo;s age on a past or future date, for example on the day of an exam or a retirement date.</p>
+<h2>Questions</h2>
+<div class="faq"><details><summary>How old am I in days?</summary><p>Enter your date of birth. The &ldquo;In days&rdquo; row shows how many days you have been alive, counting today as not yet finished.</p></details><details><summary>When is my next birthday?</summary><p>The &ldquo;Next birthday&rdquo; row gives the date and the weekday it falls on, and how many days are left until then.</p></details><details><summary>Can I work out an age on a past date?</summary><p>Yes. Change &ldquo;Age on&rdquo; to any date after the date of birth.</p></details><details><summary>Is my date of birth stored?</summary><p>No. The calculation happens in your browser and nothing you type is sent to a server. The date does appear in the page address so you can share or bookmark the result.</p></details></div><h2>More date calculators</h2><ul class="other-tools"><li><a href="/"><strong>Days between dates</strong><span>Count the days, weeks and months from one date to another.</span></a></li><li><a href="/add-subtract"><strong>Add or subtract</strong><span>Find the date a number of days, weeks, months or years away.</span></a></li><li><a href="/workdays"><strong>Workdays</strong><span>Count Monday-to-Friday days between two dates.</span></a></li><li><a href="/day-of-week"><strong>Day of the week</strong><span>See the weekday, week number and day of the year for any date.</span></a></li></ul></article>
+</main>
+<aside class="rail rail--right" aria-label="Advertisement"><div class="rail__sticky"><div class="ad ad--right" data-ad="right-vertical"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div></aside>
+</div>
+
+<div class="band"><div class="ad ad--bottom" data-ad="bottom-banner"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div>
+
+<footer class="footer">
+<div class="footer__inner">
+<p>&copy; 2026 Dayspan. Free date calculators.</p>
+<nav aria-label="Site">
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+<a href="/privacy">Privacy policy</a>
+<a href="/terms">Terms of use</a>
+</nav>
+</div>
+</footer>
+</body>
+</html>

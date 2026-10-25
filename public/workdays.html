@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workdays Calculator: Business Days Between Dates | Dayspan</title>
+<meta name="description" content="Count the business days (Monday to Friday) between two dates, with weekend days and calendar days shown alongside.">
+<link rel="canonical" href="https://dayspan.example/workdays">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dayspan">
+<meta property="og:title" content="Workdays Calculator: Business Days Between Dates | Dayspan">
+<meta property="og:description" content="Count the business days (Monday to Friday) between two dates, with weekend days and calendar days shown alongside.">
+<meta property="og:url" content="https://dayspan.example/workdays">
+<meta name="theme-color" content="#c41e3a">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/ads-config.js"></script>
+<script src="/assets/js/ads.js" defer></script>
+<script type="module" src="/assets/js/app.js"></script>
+</head>
+<body data-tool="workdays">
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="masthead__inner">
+<a class="brand" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="24" rx="4" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/><path d="M3 9a4 4 0 0 1 4-4h18a4 4 0 0 1 4 4v3H3z" fill="var(--red-bar)"/><rect x="9" y="2" width="3" height="7" rx="1.5" fill="var(--ink)"/><rect x="20" y="2" width="3" height="7" rx="1.5" fill="var(--ink)"/><path d="M11 17h10M11 22h6" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/></svg>Dayspan</a>
+<nav class="tools" aria-label="Calculators">
+<a href="/">Days between dates</a>
+<a href="/add-subtract">Add or subtract</a>
+<a href="/age">Age</a>
+<a href="/workdays" aria-current="page">Workdays</a>
+<a href="/day-of-week">Day of the week</a>
+</nav>
+</div>
+</header>
+
+<div class="band"><div class="ad ad--top" data-ad="top-banner"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div>
+
+<div class="frame">
+<aside class="rail rail--left" aria-label="Advertisement"><div class="rail__sticky"><div class="ad ad--left" data-ad="left-skyscraper"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div></aside>
+<main id="main">
+<div class="tool-head"><h1>Workdays between two dates</h1><p>Count the Monday-to-Friday days between two dates, leaving weekends out.</p></div><form class="calc" id="calc" novalidate>
+<div class="fields">
+<div class="field"><label for="from">Start date</label><div class="field-row"><input type="date" id="from" name="from" min="0001-01-01" max="9999-12-31" required><button type="button" class="btn" data-today="from">Today</button></div></div><div class="field"><label for="to">End date</label><div class="field-row"><input type="date" id="to" name="to" min="0001-01-01" max="9999-12-31" required><button type="button" class="btn" data-today="to">Today</button></div></div><div class="field field--fit"><button type="button" class="btn" id="swap">Swap dates</button></div>
+</div>
+<div class="options"><label class="check"><input type="checkbox" id="include-end" name="end">Count the end date too</label></div>
+<noscript><p class="empty">This calculator needs JavaScript. Turn it on in your browser to see results.</p></noscript>
+<section class="result" aria-labelledby="result-h">
+<h2 id="result-h" class="visually-hidden">Result</h2>
+<p id="result-empty" class="empty" hidden></p>
+<div id="result-body">
+<div class="spread"><figure class="leaf" id="leaf-a"><figcaption class="visually-hidden">Start date</figcaption><span class="leaf__month"></span><span class="leaf__day"></span><span class="leaf__weekday"></span></figure><div class="span-line" aria-hidden="true"><div class="span-line__rule"></div><span class="span-line__value" id="span-value"></span><span class="span-line__unit" id="span-unit"></span></div><figure class="leaf" id="leaf-b"><figcaption class="visually-hidden">End date</figcaption><span class="leaf__month"></span><span class="leaf__day"></span><span class="leaf__weekday"></span></figure></div>
+<p id="summary" class="summary" aria-live="polite"></p>
+<dl id="facts" class="facts"></dl>
+<div class="share"><button class="btn" id="copy-link" type="button">Copy link to this result</button><span id="copy-status" role="status"></span></div>
+</div>
+</section>
+</form><section class="ad-tiles" aria-label="Advertisements"><div class="ad ad--tile" data-ad="tile-1"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div><div class="ad ad--tile" data-ad="tile-2"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div><div class="ad ad--tile" data-ad="tile-3"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div><div class="ad ad--tile" data-ad="tile-4"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></section><article class="prose">
+<h2>How workdays are counted</h2>
+<p>Every Monday, Tuesday, Wednesday, Thursday and Friday from the start date up to the end date counts as one workday. Saturdays and Sundays are left out. As with the days calculator, the start date is included and the end date is only included if you tick <strong>Count the end date too</strong>.</p>
+<p>Public holidays are not removed, because they differ between countries, states and employers. Subtract the holidays that apply to you from the total.</p>
+<h2>Questions</h2>
+<div class="faq"><details><summary>How many workdays are in a year?</summary><p>Most years have 260 or 261 weekdays, and leap years can have 262. Enter January 1 and December 31 with the end date counted to see the exact number for any year.</p></details><details><summary>How many workdays are in a month?</summary><p>Between 20 and 23, depending on the month and which weekday it starts on. Enter the first and last day of the month and tick &ldquo;Count the end date too&rdquo;.</p></details><details><summary>Can I find the date 10 workdays from now?</summary><p>Yes, use <a href="/add-subtract">Add or subtract</a>, set Days to 10 and tick &ldquo;Count days as workdays&rdquo;.</p></details></div><h2>More date calculators</h2><ul class="other-tools"><li><a href="/"><strong>Days between dates</strong><span>Count the days, weeks and months from one date to another.</span></a></li><li><a href="/add-subtract"><strong>Add or subtract</strong><span>Find the date a number of days, weeks, months or years away.</span></a></li><li><a href="/age"><strong>Age</strong><span>Work out an exact age in years, months and days.</span></a></li><li><a href="/day-of-week"><strong>Day of the week</strong><span>See the weekday, week number and day of the year for any date.</span></a></li></ul></article>
+</main>
+<aside class="rail rail--right" aria-label="Advertisement"><div class="rail__sticky"><div class="ad ad--right" data-ad="right-vertical"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div></aside>
+</div>
+
+<div class="band"><div class="ad ad--bottom" data-ad="bottom-banner"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div>
+
+<footer class="footer">
+<div class="footer__inner">
+<p>&copy; 2026 Dayspan. Free date calculators.</p>
+<nav aria-label="Site">
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+<a href="/privacy">Privacy policy</a>
+<a href="/terms">Terms of use</a>
+</nav>
+</div>
+</footer>
+</body>
+</html>

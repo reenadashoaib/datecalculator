@@ -1,9 +1,10 @@
 {
   // Deploys public/ as a static site on Cloudflare Workers. Run: npx wrangler deploy
-  "name": "percentage-calculator",
+  "name": "dayspan-date-calculator",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./public",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
   }
 }

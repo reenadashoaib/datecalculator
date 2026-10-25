@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://dayspan.example/</loc></url>
+  <url><loc>https://dayspan.example/add-subtract</loc></url>
+  <url><loc>https://dayspan.example/age</loc></url>
+  <url><loc>https://dayspan.example/workdays</loc></url>
+  <url><loc>https://dayspan.example/day-of-week</loc></url>
+  <url><loc>https://dayspan.example/about</loc></url>
+  <url><loc>https://dayspan.example/contact</loc></url>
+  <url><loc>https://dayspan.example/privacy</loc></url>
+  <url><loc>https://dayspan.example/terms</loc></url>
+</urlset>

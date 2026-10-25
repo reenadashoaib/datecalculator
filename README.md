@@ -1,59 +1,84 @@
-# Percentage Calculator
+# Dayspan date calculator
 
-A static percentage calculator website with built-in ad spaces, ready to deploy on Cloudflare. Plain HTML, CSS and JavaScript, with no build step.
+A static date calculator website with built-in ad spaces, ready for Google AdSense and Cloudflare. Plain HTML, CSS and JavaScript: no build step, no framework.
 
-Everything the site serves is in `public/`:
+## Pages
 
-| File | What it is |
-|---|---|
-| `index.html` | The calculators, formulas and FAQ |
-| `about.html`, `privacy.html`, `terms.html`, `404.html` | Supporting pages (AdSense requires a privacy policy) |
-| `styles.css`, `app.js` | Styling and calculator logic |
-| `ads-config.js` | **The one file you edit to turn ads on** |
-| `ads.js` | Fills the ad spaces from `ads-config.js` |
-| `ads.txt` | Authorizes Google to sell your ad space |
-| `_headers`, `robots.txt`, `favicon.svg` | Cloudflare headers, crawler rules, icon |
+| URL | File | What it does |
+|---|---|---|
+| `/` | `index.html` | Days between two dates (also weeks, months, workdays, hours) |
+| `/add-subtract` | `add-subtract.html` | Add or subtract years, months, weeks, days or workdays |
+| `/age` | `age.html` | Exact age, next birthday |
+| `/workdays` | `workdays.html` | Monday-to-Friday days between two dates |
+| `/day-of-week` | `day-of-week.html` | Weekday, ISO week number, day of the year |
+| `/about`, `/contact`, `/privacy`, `/terms`, 404 | | Supporting pages. AdSense needs a privacy policy and a way to contact you. |
 
-## Ad spaces
+Results update the page address (for example `/age?birth=1990-05-20`), so every result can be shared or bookmarked.
 
-| Name in `ads-config.js` | Where | Size |
+Code lives in `public/assets/`: `css/site.css`, `js/dates.js` (date math), `js/app.js` (calculators), `js/ads-config.js` and `js/ads.js` (ads).
+
+## Ads
+
+All ads are controlled from **`public/assets/js/ads-config.js`**. Until you fill it in, every slot shows a grey "Ad space" placeholder so you can see the layout.
+
+| Slot name | Where | Size |
 |---|---|---|
 | `top-banner` | Under the header | 728×90, 320×100 on phones |
-| `left-rail`, `right-rail` | Sticky beside the content, screens 1200px and wider | 160×600 |
-| `tile-1` to `tile-6` | Two rows of three tiles between calculators | 300×250 (one per row on phones) |
-| `in-article` | Inside the formulas section | Fluid |
+| `left-skyscraper` | Left of the calculator, screens 1300px+ | 160×600 |
+| `right-vertical` | Right of the calculator, screens 1100px+ | 300×600 |
+| `tile-1` to `tile-4` | Grid of tiles under the result (2 on phones) | 300×250 |
 | `bottom-banner` | Above the footer | 728×90, 320×100 on phones |
-| `interstitial` | Full-screen ad | 336×280 |
-| `video` | Floating player, bottom-right | 16:9 |
+| `video` | Floating, bottom right, after the visitor scrolls | 16:9 |
+| `popup` | Full-screen, at most once per visitor per 24 hours | Any |
 
-Until you add your AdSense ID, every space shows a labeled placeholder so you can see the layout.
+Side ads stick in place while scrolling on screens taller than 900px.
 
-## Turning on AdSense
+### Turning on AdSense
 
-1. Deploy the site and apply for AdSense with your domain.
-2. In `public/ads-config.js`, set `adsenseClient` to your publisher ID (`ca-pub-…`).
-3. In AdSense, create a display ad unit for each space (Ads > By ad unit) and paste each slot ID into `slots`. A space with no slot ID stays hidden.
-4. In `public/ads.txt`, put in your publisher ID and remove the `#` from the last line.
-5. In `privacy.html`, `about.html` and `terms.html`, replace `you@example.com` with your email.
-6. Turn on Google's consent message for visitors in Europe (Privacy & messaging in AdSense). The privacy policy says this consent is asked for.
+1. Deploy the site to your domain and apply at <https://adsense.google.com>.
+2. In `ads-config.js`, set `adsenseClient` to your publisher ID (`ca-pub-…`).
+3. In AdSense, create a **display ad unit** for each slot, and paste each unit's `data-ad-slot` number into the slot, for example `"top-banner": { adsense: "1234567890" }`.
+4. In `public/ads.txt`, put in your publisher ID and remove the `#`.
+5. Set `showPlaceholders: false` so empty slots disappear.
+6. In AdSense, go to **Privacy & messaging** and set up the GDPR consent message. Google requires one for visitors from the EEA, the UK and Switzerland.
 
-### Two ad spaces AdSense won't fill
+### Selling ad space directly
 
-- **Full-screen pop-up.** AdSense policy doesn't allow its ads inside a pop-up you build yourself. Instead, set `interstitial.enabled` to `false` and turn on **Vignette ads** under Auto ads in AdSense. Google then shows its own full-screen ads between page views. Keep the built-in pop-up only for another ad network's code (put it in `interstitial.html`) or ads you sell directly.
-- **Corner video player.** AdSense has no ad unit for this. Paste a video ad network's embed code into `video.html`. If it's empty once AdSense is on, the player stays hidden.
+Any slot can show your own ad instead of AdSense:
 
-Out of the box, the pop-up appears once per visit: after 25 seconds or after 3 calculations, whichever comes first. It can be closed straight away with its button, the Escape key, or a click outside it. You can change the timing in `ads-config.js`.
+```js
+"tile-1": { image: "/ads/acme-300x250.jpg", href: "https://acme.example", alt: "Acme" },
+```
+
+Put the image in `public/ads/`. Links open in a new tab and are marked `rel="sponsored"`.
+
+### Before relying on the video and popup slots
+
+AdSense does not allow its ads inside popups or custom floating players. Those two slots are therefore built for ads you sell yourself:
+
+- **Video**: set `video.src` to an MP4 (it plays muted and loops), plus optional `poster` and `href`.
+- **Popup**: set `popup.image` and `popup.href`. For an AdSense full-screen ad, turn on **Auto ads → Vignette ads** in your AdSense account. Google then shows its own compliant full-screen ad between page views.
+
+Also keep in mind that AdSense reviews sites for ad density. If approval is slow, set `showPlaceholders: false` and leave some slots empty until you're approved.
+
+## Your domain and email
+
+The pages use `dayspan.example` as a placeholder. Replace it everywhere with your domain, for example:
+
+```sh
+grep -rl 'dayspan.example' public | xargs sed -i 's/dayspan\.example/yourdomain.com/g'
+```
+
+That updates canonical links, `sitemap.xml`, `robots.txt` and the contact email (`hello@dayspan.example`). To rename the site, replace `Dayspan` the same way.
 
 ## Deploying to Cloudflare
 
-**Cloudflare Pages (from GitHub):** Workers & Pages > Create > Pages > Connect to Git, pick this repo, leave the build command empty, and set the build output directory to `public`.
+**Workers (recommended):** `npx wrangler deploy`. `wrangler.jsonc` serves `public/` with clean URLs (`/age` serves `age.html`) and the custom 404 page. Then add your domain under the Worker's **Settings → Domains & Routes**.
 
-**Cloudflare Workers (from your computer):** `npx wrangler deploy` uses `wrangler.jsonc` to upload `public/` as static assets.
+**Pages:** connect this GitHub repo in the Cloudflare dashboard, leave the build command empty and set the output directory to `public`.
 
-## Running locally
+Preview locally with `npx wrangler dev`.
 
-```sh
-python3 -m http.server 8000 -d public
-```
+## Tests
 
-Then open http://localhost:8000.
+`npm test` runs the date-math tests (leap years, month ends, ISO weeks, workdays, ages) with Node's built-in test runner.

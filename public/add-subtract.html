@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add or Subtract Days from a Date | Dayspan</title>
+<meta name="description" content="Add or subtract days, weeks, months or years from any date and see the resulting date and weekday. Can skip weekends.">
+<link rel="canonical" href="https://dayspan.example/add-subtract">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dayspan">
+<meta property="og:title" content="Add or Subtract Days from a Date | Dayspan">
+<meta property="og:description" content="Add or subtract days, weeks, months or years from any date and see the resulting date and weekday. Can skip weekends.">
+<meta property="og:url" content="https://dayspan.example/add-subtract">
+<meta name="theme-color" content="#c41e3a">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/ads-config.js"></script>
+<script src="/assets/js/ads.js" defer></script>
+<script type="module" src="/assets/js/app.js"></script>
+</head>
+<body data-tool="add">
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="masthead__inner">
+<a class="brand" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="24" rx="4" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/><path d="M3 9a4 4 0 0 1 4-4h18a4 4 0 0 1 4 4v3H3z" fill="var(--red-bar)"/><rect x="9" y="2" width="3" height="7" rx="1.5" fill="var(--ink)"/><rect x="20" y="2" width="3" height="7" rx="1.5" fill="var(--ink)"/><path d="M11 17h10M11 22h6" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/></svg>Dayspan</a>
+<nav class="tools" aria-label="Calculators">
+<a href="/">Days between dates</a>
+<a href="/add-subtract" aria-current="page">Add or subtract</a>
+<a href="/age">Age</a>
+<a href="/workdays">Workdays</a>
+<a href="/day-of-week">Day of the week</a>
+</nav>
+</div>
+</header>
+
+<div class="band"><div class="ad ad--top" data-ad="top-banner"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div>
+
+<div class="frame">
+<aside class="rail rail--left" aria-label="Advertisement"><div class="rail__sticky"><div class="ad ad--left" data-ad="left-skyscraper"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div></aside>
+<main id="main">
+<div class="tool-head"><h1>Add or subtract time from a date</h1><p>Start from a date, choose an amount of time, and see the date it lands on.</p></div><form class="calc" id="calc" novalidate>
+<div class="fields">
+<div class="field"><label for="start">Start date</label><div class="field-row"><input type="date" id="start" name="start" min="0001-01-01" max="9999-12-31" required><button type="button" class="btn" data-today="start">Today</button></div></div><div class="field"><span class="field-label" id="op-label"><strong>Add or subtract</strong></span>
+<div class="segmented" role="radiogroup" aria-labelledby="op-label">
+<label><input type="radio" name="op" value="add">Add</label>
+<label><input type="radio" name="op" value="sub">Subtract</label>
+</div></div>
+</div>
+<fieldset class="amounts"><legend class="visually-hidden">Amount of time</legend>
+<div class="field"><label for="years">Years</label><input type="number" id="years" name="years" min="0" max="100000" inputmode="numeric"></div>
+<div class="field"><label for="months">Months</label><input type="number" id="months" name="months" min="0" max="100000" inputmode="numeric"></div>
+<div class="field"><label for="weeks">Weeks</label><input type="number" id="weeks" name="weeks" min="0" max="100000" inputmode="numeric"></div>
+<div class="field"><label for="days">Days</label><input type="number" id="days" name="days" min="0" max="100000" inputmode="numeric"></div>
+</fieldset><div class="options"><label class="check"><input type="checkbox" id="business" name="biz">Count days as workdays (skip weekends)</label></div>
+<noscript><p class="empty">This calculator needs JavaScript. Turn it on in your browser to see results.</p></noscript>
+<section class="result" aria-labelledby="result-h">
+<h2 id="result-h" class="visually-hidden">Result</h2>
+<p id="result-empty" class="empty" hidden></p>
+<div id="result-body">
+<div class="spread"><figure class="leaf" id="leaf-a"><figcaption class="visually-hidden">Start date</figcaption><span class="leaf__month"></span><span class="leaf__day"></span><span class="leaf__weekday"></span></figure><div class="span-line" aria-hidden="true"><div class="span-line__rule"></div><span class="span-line__value" id="span-value"></span><span class="span-line__unit" id="span-unit"></span></div><figure class="leaf" id="leaf-b"><figcaption class="visually-hidden">Resulting date</figcaption><span class="leaf__month"></span><span class="leaf__day"></span><span class="leaf__weekday"></span></figure></div>
+<p id="summary" class="summary" aria-live="polite"></p>
+<dl id="facts" class="facts"></dl>
+<div class="share"><button class="btn" id="copy-link" type="button">Copy link to this result</button><span id="copy-status" role="status"></span></div>
+</div>
+</section>
+</form><section class="ad-tiles" aria-label="Advertisements"><div class="ad ad--tile" data-ad="tile-1"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div><div class="ad ad--tile" data-ad="tile-2"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div><div class="ad ad--tile" data-ad="tile-3"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div><div class="ad ad--tile" data-ad="tile-4"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></section><article class="prose">
+<h2>How the date is worked out</h2>
+<p>Years and months are added first, then weeks, then days. Adding a month keeps the same day of the month: March 10 plus 1 month is April 10. If that day doesn&rsquo;t exist in the new month, the result moves to the month&rsquo;s last day, so January 31 plus 1 month is February 28 (or February 29 in a leap year).</p>
+<p>Weeks are always 7 calendar days. Days are calendar days unless you tick <strong>Count days as workdays</strong>; then Saturdays and Sundays are skipped, and the start date itself isn&rsquo;t counted. Adding 1 workday to a Friday gives the following Monday.</p>
+<h2>Common uses</h2>
+<ul>
+<li>A due date 30, 60 or 90 days after an invoice</li>
+<li>A deadline 10 workdays from today</li>
+<li>The end date of a 6-month contract or a 12-week program</li>
+<li>The date 280 days (40 weeks) after a given day</li>
+</ul>
+<h2>Questions</h2>
+<div class="faq"><details><summary>What is 90 days from today?</summary><p>Leave the start date on today, set Days to 90 and keep Add selected. The result shows the date, its weekday and its week number.</p></details><details><summary>Why does adding 1 month to January 31 give February 28?</summary><p>February has no 31st, so the result moves to the last day of February. This is the usual convention for contracts and billing.</p></details><details><summary>Can I combine years, months, weeks and days?</summary><p>Yes. Fill in as many as you need. They are applied in that order, largest first.</p></details><details><summary>Are public holidays skipped in workday mode?</summary><p>No. Only Saturdays and Sundays are skipped, since holidays differ by country and region.</p></details></div><h2>More date calculators</h2><ul class="other-tools"><li><a href="/"><strong>Days between dates</strong><span>Count the days, weeks and months from one date to another.</span></a></li><li><a href="/age"><strong>Age</strong><span>Work out an exact age in years, months and days.</span></a></li><li><a href="/workdays"><strong>Workdays</strong><span>Count Monday-to-Friday days between two dates.</span></a></li><li><a href="/day-of-week"><strong>Day of the week</strong><span>See the weekday, week number and day of the year for any date.</span></a></li></ul></article>
+</main>
+<aside class="rail rail--right" aria-label="Advertisement"><div class="rail__sticky"><div class="ad ad--right" data-ad="right-vertical"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div></aside>
+</div>
+
+<div class="band"><div class="ad ad--bottom" data-ad="bottom-banner"><span class="ad__label">Advertisement</span><div class="ad__box"></div></div></div>
+
+<footer class="footer">
+<div class="footer__inner">
+<p>&copy; 2026 Dayspan. Free date calculators.</p>
+<nav aria-label="Site">
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+<a href="/privacy">Privacy policy</a>
+<a href="/terms">Terms of use</a>
+</nav>
+</div>
+</footer>
+</body>
+</html>
