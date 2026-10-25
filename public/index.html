@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Percentage Calculator: percent of, change, increase and difference</title>
+  <meta name="description" content="Free percentage calculator. Find a percent of a number, what percent one number is of another, percentage change, increase or decrease by a percent, and percentage difference, with the working shown.">
+  <link rel="canonical" href="/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#00706B">
+  <meta property="og:title" content="Percentage Calculator">
+  <meta property="og:description" content="Six percentage calculators with the working shown. Type two numbers, get the answer.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Percentage Calculator",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the calculators</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="/" aria-label="Percentage Calculator home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="9" cy="9" r="5"/><circle cx="23" cy="23" r="5"/><path d="M25 5 7 27"/></svg>
+        <span>Percentage Calculator</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#calculators">Calculators</a>
+        <a href="#formulas">Formulas</a>
+        <a href="#faq">Questions</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="ad-band">
+    <div class="ad ad--leaderboard" data-ad="top-banner" data-size="728x90" data-size-small="320x100" data-format="horizontal" data-responsive></div>
+  </div>
+
+  <div class="layout">
+    <aside class="rail rail--left" aria-label="Advertisement">
+      <div class="ad ad--skyscraper" data-ad="left-rail" data-size="160x600" data-format="vertical"></div>
+    </aside>
+
+    <main id="main" class="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">Percentage calculator</h1>
+        <p class="lede">Type two numbers and the answer appears as you go, with the working shown underneath.</p>
+
+        <form class="calc calc--hero" data-calc="of" autocomplete="off">
+          <h2 class="sr-only">Percent of a number</h2>
+          <p class="sentence">
+            What is
+            <input name="a" inputmode="decimal" value="15" aria-label="Percentage"><span class="unit">%</span> of
+            <input name="b" inputmode="decimal" value="80" aria-label="Number">?
+          </p>
+          <div class="calc__answer">
+            <output class="calc__result" aria-live="polite">—</output>
+            <button type="button" class="link-btn" data-copy>Copy result</button>
+          </div>
+          <div class="bar" aria-hidden="true"><span class="bar__fill"></span></div>
+          <p class="calc__working"></p>
+        </form>
+      </section>
+
+      <section id="calculators" class="calcs" aria-labelledby="calcs-title">
+        <h2 id="calcs-title" class="section-title">More ways to work out a percentage</h2>
+
+        <form class="calc" data-calc="whatPercent" autocomplete="off">
+          <h3 class="calc__title">What percent one number is of another</h3>
+          <p class="sentence">
+            <input name="a" inputmode="decimal" value="30" aria-label="Part">
+            is what % of
+            <input name="b" inputmode="decimal" value="120" aria-label="Total">?
+          </p>
+          <div class="calc__answer">
+            <output class="calc__result" aria-live="polite">—</output>
+            <button type="button" class="link-btn" data-copy>Copy result</button>
+          </div>
+          <div class="bar" aria-hidden="true"><span class="bar__fill"></span></div>
+          <p class="calc__working"></p>
+        </form>
+
+        <form class="calc" data-calc="change" autocomplete="off">
+          <h3 class="calc__title">Percentage change</h3>
+          <p class="sentence">
+            From
+            <input name="a" inputmode="decimal" value="50" aria-label="Starting value">
+            to
+            <input name="b" inputmode="decimal" value="65" aria-label="New value">
+            is a change of
+          </p>
+          <div class="calc__answer">
+            <output class="calc__result" aria-live="polite">—</output>
+            <button type="button" class="link-btn" data-copy>Copy result</button>
+          </div>
+          <div class="bar" aria-hidden="true"><span class="bar__fill"></span></div>
+          <p class="calc__working"></p>
+        </form>
+
+        <div class="ad-tiles">
+          <div class="ad ad--tile" data-ad="tile-1" data-size="300x250" data-format="rectangle"></div>
+          <div class="ad ad--tile" data-ad="tile-2" data-size="300x250" data-format="rectangle"></div>
+          <div class="ad ad--tile" data-ad="tile-3" data-size="300x250" data-format="rectangle"></div>
+        </div>
+
+        <form class="calc" data-calc="adjust" autocomplete="off">
+          <h3 class="calc__title">Increase or decrease by a percentage</h3>
+          <p class="sentence">
+            <select name="mode" aria-label="Increase or decrease">
+              <option value="increase">Increase</option>
+              <option value="decrease">Decrease</option>
+            </select>
+            <input name="b" inputmode="decimal" value="200" aria-label="Number">
+            by
+            <input name="a" inputmode="decimal" value="20" aria-label="Percentage"><span class="unit">%</span>
+          </p>
+          <div class="calc__answer">
+            <output class="calc__result" aria-live="polite">—</output>
+            <button type="button" class="link-btn" data-copy>Copy result</button>
+          </div>
+          <div class="bar" aria-hidden="true"><span class="bar__fill"></span></div>
+          <p class="calc__working"></p>
+        </form>
+
+        <form class="calc" data-calc="reverse" autocomplete="off">
+          <h3 class="calc__title">Find the whole from a part</h3>
+          <p class="sentence">
+            <input name="a" inputmode="decimal" value="45" aria-label="Part">
+            is
+            <input name="b" inputmode="decimal" value="30" aria-label="Percentage"><span class="unit">%</span> of what?
+          </p>
+          <div class="calc__answer">
+            <output class="calc__result" aria-live="polite">—</output>
+            <button type="button" class="link-btn" data-copy>Copy result</button>
+          </div>
+          <div class="bar" aria-hidden="true"><span class="bar__fill"></span></div>
+          <p class="calc__working"></p>
+        </form>
+
+        <form class="calc" data-calc="difference" autocomplete="off">
+          <h3 class="calc__title">Percentage difference</h3>
+          <p class="sentence">
+            The difference between
+            <input name="a" inputmode="decimal" value="40" aria-label="First value">
+            and
+            <input name="b" inputmode="decimal" value="60" aria-label="Second value">
+            is
+          </p>
+          <div class="calc__answer">
+            <output class="calc__result" aria-live="polite">—</output>
+            <button type="button" class="link-btn" data-copy>Copy result</button>
+          </div>
+          <div class="bar" aria-hidden="true"><span class="bar__fill"></span></div>
+          <p class="calc__working"></p>
+        </form>
+      </section>
+
+      <div class="ad-tiles">
+        <div class="ad ad--tile" data-ad="tile-4" data-size="300x250" data-format="rectangle"></div>
+        <div class="ad ad--tile" data-ad="tile-5" data-size="300x250" data-format="rectangle"></div>
+        <div class="ad ad--tile" data-ad="tile-6" data-size="300x250" data-format="rectangle"></div>
+      </div>
+
+      <section id="formulas" class="prose" aria-labelledby="formulas-title">
+        <h2 id="formulas-title" class="section-title">The formulas, with examples</h2>
+        <p>A percentage is a number out of 100. 25% means 25 out of every 100, which is the same as 0.25 or one quarter. Every calculator above uses one of these formulas.</p>
+
+        <dl class="formulas">
+          <div>
+            <dt>Percent of a number</dt>
+            <dd><code>P ÷ 100 × N</code></dd>
+            <dd>20% of 150 is 0.2 × 150 = 30.</dd>
+          </div>
+          <div>
+            <dt>What percent X is of Y</dt>
+            <dd><code>X ÷ Y × 100</code></dd>
+            <dd>18 out of 24 is 18 ÷ 24 × 100 = 75%.</dd>
+          </div>
+          <div>
+            <dt>Percentage change</dt>
+            <dd><code>(new − old) ÷ |old| × 100</code></dd>
+            <dd>A price going from $80 to $100 is (100 − 80) ÷ 80 × 100 = a 25% increase.</dd>
+          </div>
+          <div>
+            <dt>Increase or decrease by a percent</dt>
+            <dd><code>N × (1 ± P ÷ 100)</code></dd>
+            <dd>$60 with 15% off is 60 × 0.85 = $51.</dd>
+          </div>
+          <div>
+            <dt>Whole from a part</dt>
+            <dd><code>X ÷ (P ÷ 100)</code></dd>
+            <dd>If 12 people are 8% of a group, the group is 12 ÷ 0.08 = 150 people.</dd>
+          </div>
+          <div>
+            <dt>Percentage difference</dt>
+            <dd><code>|A − B| ÷ ((A + B) ÷ 2) × 100</code></dd>
+            <dd>Between 40 and 60 the difference is 20 ÷ 50 × 100 = 40%.</dd>
+          </div>
+        </dl>
+
+        <div class="ad ad--inline" data-ad="in-article" data-size="fluid" data-format="fluid"></div>
+
+        <h3>Percentage change or percentage difference?</h3>
+        <p>Use percentage change when one value came first, like last month's sales against this month's. The starting value is the base, so going from 50 to 100 is a 100% increase, and going back from 100 to 50 is a 50% decrease.</p>
+        <p>Use percentage difference when neither value is the starting point, like comparing the prices of two shops. It divides by the average of both, so the answer is the same whichever way round you enter them.</p>
+
+        <h3>Percentage points</h3>
+        <p>When a rate moves from 4% to 6%, it went up by 2 percentage points, but by 50% in relative terms. News reports and loan offers often mix the two, so check which one is meant.</p>
+      </section>
+
+      <section id="faq" class="prose faq" aria-labelledby="faq-title">
+        <h2 id="faq-title" class="section-title">Common questions</h2>
+        <details>
+          <summary>How do I work out a percentage on a phone calculator?</summary>
+          <p>Divide the part by the whole, then multiply by 100. For 18 out of 24, type 18 ÷ 24 × 100 to get 75.</p>
+        </details>
+        <details>
+          <summary>How do I add a percentage to a price, like sales tax?</summary>
+          <p>Multiply the price by 1 plus the rate. For 8% tax on $45, that's 45 × 1.08 = $48.60. Use the increase calculator above to do it for you.</p>
+        </details>
+        <details>
+          <summary>Why doesn't a 10% rise followed by a 10% fall get me back to the start?</summary>
+          <p>The fall is taken from the bigger number. 100 rises 10% to 110, then falls 10% of 110, which is 11, ending at 99.</p>
+        </details>
+        <details>
+          <summary>Can a percentage be more than 100%?</summary>
+          <p>Yes. 150 is 150% of 100, and a value that triples has grown by 200%. Only shares of a single whole, like a pie chart, stop at 100%.</p>
+        </details>
+        <details>
+          <summary>How do I remove the tax from a price that already includes it?</summary>
+          <p>Divide by 1 plus the rate. A $54 bill that includes 8% tax was $54 ÷ 1.08 = $50 before tax.</p>
+        </details>
+      </section>
+    </main>
+
+    <aside class="rail rail--right" aria-label="Advertisement">
+      <div class="ad ad--skyscraper" data-ad="right-rail" data-size="160x600" data-format="vertical"></div>
+    </aside>
+  </div>
+
+  <div class="ad-band ad-band--bottom">
+    <div class="ad ad--leaderboard" data-ad="bottom-banner" data-size="728x90" data-size-small="320x100" data-format="horizontal" data-responsive></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <p>© <span id="year">2026</span> Percentage Calculator</p>
+      <nav aria-label="Footer">
+        <a href="/about.html">About</a>
+        <a href="/privacy.html">Privacy policy</a>
+        <a href="/terms.html">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <aside id="video-ad" class="video-ad" aria-label="Advertisement" hidden>
+    <div class="video-ad__bar">
+      <span class="ad__label">Advertisement</span>
+      <button type="button" class="video-ad__close" aria-label="Close video ad">×</button>
+    </div>
+    <div class="video-ad__body">
+      <div class="ad ad--placeholder ad--video"><span class="ad__label">Video ad</span><span class="ad__size">16 : 9</span></div>
+    </div>
+  </aside>
+
+  <div id="interstitial" class="interstitial" role="dialog" aria-modal="true" aria-label="Advertisement" hidden>
+    <div class="interstitial__panel">
+      <div class="interstitial__bar">
+        <span class="ad__label">Advertisement</span>
+        <button type="button" class="interstitial__close">Close ad</button>
+      </div>
+      <div class="ad ad--interstitial" data-ad="interstitial" data-size="336x280" data-format="rectangle"></div>
+    </div>
+  </div>
+
+  <script src="/app.js" defer></script>
+  <script src="/ads-config.js" defer></script>
+  <script src="/ads.js" defer></script>
+</body>
+</html>
